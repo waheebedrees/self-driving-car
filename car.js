@@ -28,7 +28,7 @@ class Car {
 
         
         this.img=new Image();
-        this.img.src="car.png";
+        this.img.src="images/car.png";
 
         this.mask=document.createElement("canvas");
         this.mask.width=width;
@@ -73,9 +73,7 @@ class Car {
             // this.controls.right=outputs[2] > 0.3 ? 1 : 0;
             // this.controls.reverse=outputs[3] > 0.4 ? 1 : 0;
 
-        //   this.controls.left=outputs[1]
-        //   this.controls.right=outputs[2];
-          
+
         this.controls.forward = 0;
         this.controls.left = 0;
         this.controls.right = 0;

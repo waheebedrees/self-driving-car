@@ -1,6 +1,6 @@
 # Self-Driving Car Neural Network Simulation
 
-<img src="Screenshot2.png" alt="Simulation Screenshot" />
+<img src="images/Screenshot2.png" alt="Simulation Screenshot" />
 
 
 A JavaScript-based simulation of self-driving cars using neural networks and genetic algorithms.
