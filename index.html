@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Driving Car Simulation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #1a1a1a;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+        }
+        
+    
+        h1 {
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+        
+        #gameCanvas {
+            border: 2px solid #333;
+            background: #2a2a2a;
+            margin:auto ;
+        
+        }
+        
+        .controls {
+            margin:auto;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: start;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        button:hover {
+            background: #45a049;
+        }
+        
+        button:disabled {
+            background: #666;
+            cursor: not-allowed;
+        }
+        
+        .info {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .stat {
+            background: #333;
+            padding: 10px;
+            border-radius: 5px;
+            min-width: 120px;
+            text-align: center;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            color: #aaa;
+        }
+        
+        .stat-value {
+            font-size: 18px;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        
+    #networkCanvas{
+        background:black;
+    }
+    </style>
+</head>
+<body>
+    
+
+
+    
+    <div class="controls">
+        <button id="startBtn">Start Simulation</button>
+        <button id="pauseBtn" disabled>Pause</button>
+        <button id="resetBtn">Reset</button>
+        <button id="saveBtn" disabled>Save Best</button>
+        <button id="loadBtn">Load Best</button>
+        
+        <div class="info">
+            <div class="stat">
+                <div class="stat-label">Generation</div>
+                <div class="stat-value" id="generation">0</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Best Score</div>
+                <div class="stat-value" id="bestScore">0</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Cars Alive</div>
+                <div class="stat-value" id="carsAlive">0</div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Time</div>
+                <div class="stat-value" id="time">0s</div>
+            </div>
+        </div>
+        
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <canvas id="networkCanvas"></canvas>
+
+    <script src="visualizer.js"></script>
+    <script src="network.js"></script>
+    <script src="utils.js"></script>
+    <script src="road.js"></script>
+    <script src="car.js"></script>
+    <script src="sensor.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
+
